@@ -4,7 +4,7 @@ pkg='addnote'
 home_dir=`pwd`
 output_dir=.notes
 notes_dir=src
-template_dir=~/Code/pandoc/templates/pandoc-bootstrap-adaptive-template
+template_dir=~/Code/addnote/templates/bootstrap-adaptive-template
 
 options="-f markdown --template standalone.html --css template.css --toc --toc-depth=2"
 view_notes=''
