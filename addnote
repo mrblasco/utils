@@ -1,0 +1,82 @@
+#!/bin/bash
+pkg='addnote'
+
+home_dir=`pwd`
+output_dir=.notes
+notes_dir=src
+template_dir=~/Code/pandoc/templates/pandoc-bootstrap-adaptive-template
+
+options="-f markdown --template standalone.html --css template.css --toc --toc-depth=2"
+view_notes=''
+edit_notes=''
+
+# Flags
+while test $# -gt 0 
+do
+  case "$1" in
+    -h|--help)
+      echo "$pkg - add and view notes"
+      echo " "
+      echo "$pkg [options]"
+      echo " "
+      echo "options:"
+      echo "-e, --edit                edit notes"
+      echo "-h, --help                show brief help"
+      echo "-o, --output-dir=DIR      specify a directory to store notes in"
+      echo "-v, --view                view notes"
+      exit 0 ;;
+    -e|--edit)
+      edit_notes='yes'
+      shift ;;
+    -o)
+      shift
+      home_dir=`echo $1`
+      shift ;;
+    --output-dir*)
+      home_dir=`echo "$1" | sed -e 's/^[^=]*=//g'`
+      shift;;
+    -v|--view)
+      view_notes='yes'
+      shift ;;
+    *)
+      break ;;
+  esac
+done
+
+if [ ! -d "$home_dir" ]
+then 
+  echo 'Error: $home_dir not found'
+  exit 1
+fi
+
+cd $home_dir
+
+if [ ! -d "$output_dir" ]
+then 
+  echo "Making directory $output_dir"
+  mkdir -p $output_dir/$notes_dir
+  cp  $template_dir/* $output_dir
+fi
+
+cd $output_dir
+
+update_notes () {
+  cat $notes_dir/* > allnotes.txt
+  rm $notes_dir/*
+  cp allnotes.txt $notes_dir
+}
+
+if [ "$view_notes" == "yes" ]; then
+  update_notes
+  pandoc allnotes.txt -o index.html $options
+  open index.html
+  exit 0
+fi
+
+if [ "$edit_notes" == "yes" ]; then
+  update_notes
+  edit $notes_dir/allnotes.txt
+  exit 0
+fi
+
+vim $notes_dir/$(date +%V).txt
