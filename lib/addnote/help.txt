@@ -1,0 +1,8 @@
+addnote: add, edit and view notes
+
+addnote [options]
+options:
+-e, --edit                edit notes
+-h, --help                show brief help
+-o, --output-dir=DIR      specify a directory to store notes in
+-v, --view                view notes

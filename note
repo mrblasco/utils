@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+######################################################
+# This script open or creates new notes
+# All files are kept in the $DIR directory
+DIR=~/Documents/notes
+#
+# Arguments:
+# -d, --default: open main.txt in the directory
+# -n, --newnote=name-new-file
+# -o, --open=name-file-to-open
+# -l, --list: list all files in the directory
+######################################################
+if [ ! -d "$DIR" ] 
+then
+  echo "Error: missing $DIR directory!"
+  exit 0
+fi
+## GET INPUTS ###########
+for i in "$@"
+do
+case $i in
+
+    -n=*|--newnote=*)
+    FILENAME="${i#*=}"
+    shift;;
+
+    -rm=*|--remove=*)
+    FILENAME="${i#*=}"
+    if [ -f "$DIR/$FILENAME.txt" ]; then
+      rm "$DIR/$FILENAME.txt"
+      echo "$FILENAME removed"
+    fi
+    exit 0
+    shift;;
+
+    -o=*|--open=*)
+    OPEN="${i#*=}"
+    shift;;
+
+    -l|--list)
+    ls -lS $DIR/*.txt | sed s/.*notes//g 
+    exit 0
+    shift;;
+
+    --default)
+    open $DIR/main.txt
+    shift;;
+
+    *)
+    echo "Error unknown option"
+    exit 1
+    ;;
+esac
+done
+## NEW NOTE ###################
+if [ ! -f "$DIR/${FILENAME}.txt" ]
+then
+  > "$DIR/${FILENAME}.txt"
+  open "$DIR/${FILENAME}.txt"
+  exit 0
+else
+  open "$DIR/${FILENAME}.txt"
+fi

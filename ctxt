@@ -1,0 +1,12 @@
+#!/bin/bash
+pdf_dir="Pdfs"
+bib_file="/Users/andrea/Papers/library.bib"
+opt="--bibliography=$bib_file"
+filename=$1
+
+if [ ! -f "$filename" ]; then
+ echo "Error: $1 file not found!" && exit -1
+fi
+
+output_file="$pdf_dir/${filename%.*}.pdf"
+mkdir -p "$pdf_dir" && pandoc -s -S $filename $opt -o $output_file && open $output_file

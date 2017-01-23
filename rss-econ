@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Print titles of RSS Feeds from economics journals' websites
+case "$1" in
+        qje) rss "http://qje.oxfordjournals.org/rss/current.xml";;
+        nber) rss-nber "$2";;
+        *)
+            echo "Usage: qje=Quarterly Journal of economics"
+            exit 1
+esac
+
+#curl "http://www.journals.uchicago.edu/action/showFeed?type=etoc&feed=rss&jc=jpe"
+#curl "http://qje.oxfordjournals.org/rss/current.xml"

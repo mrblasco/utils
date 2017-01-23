@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+################################################################
+# This script gets a coder's data from its handle
+# Example: 
+# tc-data-from-handle Steven
+# 
+################################################################
+if [ -z "$1" ]; then
+  echo -e "\033[0;31mError: handle is missing!\033[0m"
+  exit 1
+fi
+URL="http://www.topcoder.com/tc?module=BasicData&c=dd_marathon_round_results"
+curl -s -L "$URL&rd=$1" -o /tmp/temp.xml
+xml_to_csv /tmp/temp.xml dd_marathon_round_results/row

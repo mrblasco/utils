@@ -1,0 +1,283 @@
+# shell supports them, they are worth getting into the habit of using them.
+
+Run a command only if another command returns a zero exit status
+Use the && control operator to combine two commands so that the second is run only if the first command returns a zero exit status. In other words, if the first command runs successfully, the second command runs. If the first command fails, the second command does not run at all. For example:
+
+# Rpvoa
+
+d dasda adasd
+dsf sadasd q332as da
+
+dasda 
+# Macroeconomics project
+-  
+-
+ 
+# Academia.edu
+
+- Invitation by an editor
+    * Signal skills to editor ("get attention")
+    * Increase chances of getting published
+    * Builiding a reputation
+
+- Invitation by the author
+    * future collaboration
+    * repeated interactions
+  
+- Neutral rewards: 
+    1. Monetary incentives 
+    2. Reputation (based on likes from others)
+    3. Badges (based on popularity and other achievements)
+    4. Impact (based on page views)
+
+
+# Testing data in R
+
+Watched video on 'testing data' in R
+<https://www.youtube.com/watch?v=CAy0udiWwmg>
+
+# Employee motivations other than money
+
+### @minkler2004shirking
+
+> Using national survey on workers motivations, it shows that more than 80% of workers say they will likely work even under no monitoring from superiors instead of shirking as predicted by economic theory.  *One concern:* social desirability bias (respondents want to draw a favorable picture of themselves). *One possible solution:* ask the same sets of questions but related to someone else in the same firm, such as a colleague or someone with whom they interact frequently.
+
+
+### Personam and corporate volunteerism by Mary Runte, Debra Z. Basil
+
+> Survey of Canadians about experience in corporate-initiated volunteerism (a type of corporate-sponsored charity). Employees having the the desire to help the cause (some evidence about motivations for career). Unclear why companies should encourage employees to volunteer (common exaplanations: publicity, employees' morale)
+
+## Motivational bases of Public service by James Perry
+
+> Early theory and empirical results on why civil servants are expected to behave differently than common workers.
+
+
+# Gender quota in a matching markets: are there other/better systems?
+
+Organizations have often "quota" that must be met while hiring new members (schools, universities, government, firms, etc.). In a matching market, imposing a quota is equivalent to operate a change in the preferences of the hiring agents.Wondering whether there is a better way to affect the preferences without harming too much the equilibrium of the market. For example, a quota may introduce non-convexities in the preferences that may harm the efficiency of the market. An alternative could be to impose additional costs/discounts in hiring certain types. Another possibility in a market with N organizations competing (such as universities and students) is to create a collective requirement for all the organizations. 
+
+# NBER data projects 
+
+From 1973 to today, more than 20K abstracts of research papers in economics. How research topics evolved over time? How the economy affected research efforts (think about oil crisis, financial crisis, etc.)? Can we use text analysis to study such evolution? How? Check Margaret Roberts papers on text analysis with covariates.
+
+Data about aknowledgements in research papers
+
+- Alex Oettl should have a paper on this topic (helpers vs non-helpers)
+- One research question culd be the importance of authors on "diffusion" (citation count) controlling for quality (journal pubblication)
+- An alternative is the role of social connections
+
+Topic modeling as a measure of novelty
+
+- Combinatorial topics 
+- Jian is working on this
+
+Often empirical works on novelty estimate effects on citations of a single paper. However, individual gains from a novel paper do not stop from the first paper. It could be that the first paper does not get many citations but it allows to exploit the new field in a stream of papers. 
+
+Empirically: if a new combination appears how long does it persist? Is this taken by other people?
+
+# Ben Enke's work on beliefs in networks
+
+"What you see is all there is" nails down the experimental design to understand how people form beliefs in networks.
+
+Computer players + self-selection into two groups and ask human players (acting individually) to make a prediction about a number.
+
+Some people correctly discount the underlying correlation in signals and make the right prediction, others focus on what they observe disregarding the correlations. 
+
+He further uses individual data to try to explain what causes the difference. 
+
+<https://sites.google.com/site/benjaminenke/>
+
+
+# Game of cards
+Cards of problems and cards of technologies
+Step 1. randomize problems and technologies
+Step 2. kids should come up with solutiosn to tough problems
+
+# AFE Conference
+
+Love in the time of HIV (AFE 2016)
+
+- I do not test because I might run into someone in know
+- Bigger risk in small towns
+- Survey beliefs about ART
+- Is verifiable information that a person is under treatment? 
+(can I tell whether you are under treatment or not)
+
+'New innovations diffusion' presented by P. Gertler (AFE 2016)
+
+- Adoption of medical guidelines is slow
+- Incentives for prenatal care at clinical level
+- Intervention: pregnat mothers 1.4 weeks earlier
+
+Hand washing with soap (AFE 2016)
+
+- Needs to become an habit
+- Becker Murphy (1988) habit formation model (IV strategy to identify) 
+- Amazing experiment on soap dispenser 
+
+Management consulting by Macis (AFE 2016)
+
+- Consulting given to healthcare facilities
+- Adoption of standards 
+
+'Braintrain' by Neckerman (AFE 2016)
+
+Moocs by Michael Yeomans (AFE 2016)
+
+- Funnel of participation  
+- Plan making
+- Honors / verfied certification
+
+Uber hot issue jvh@uber.com
+
+- Economic gains of indepedent work
+- Dynamic pricing
+- Litigation space
+- pandora: dreiley@pandora.com
+
+Lost letter experiment by D. Baldassarri (AFE2016)
+
+- It is a measure of pro-social behaviour
+- Sealed letter lost -> and look at rate of return
+- 6000 letters dropped to 188 municipalities
+ 
+Wallets dropped by A. Cohn (AFE2016)
+
+- drop the wallet
+- The higher the value the higher the rate of return
+
+Wikipedia retention of editoers by J. Gallus (AFE2016)
+
+- Voluntary motivations to public goods
+- Symbolic award
+- Future value of the awards given by an institution is a function of the reputation of the institution. So, symbolic awards help workers to internalize
+- Symbolic award may also affect internal disputes among wikipidians which may have a negative effect on retention of those who have not received the award
+- symbolic award --> increases retantion rateby
+
+Lemons by Jie Bal (AFE2016)
+
+- Verifiable product
+- Local retailers differentiate quality at sale
+- Retailers know better quality but sell at uniform price
+- Retailers can treat their frequent buyers
+
+Cab drivers price congestion? by Hernan Bejarano (AFE2016)
+
+Inflation expations by A. Cavallo (AFE2016)
+
+- How consumers form expectations?
+- Personal experience vs rational inattention
+- Online and supermarket surveys
+- CPI
+
+Reserve prices Ostrovsky (AFE2016)
+
+- Reiley (2006) experiment in online auctions   
+- reserve price at yahoo 10 cents
+- Different keywords --> different reserve prices
+
+Structural field experiments 
+
+- Specify a structural model 
+- Model of a representative consumer who behaves in equilibrium, no learning, known distribution, knows payoffs, etc. 
+- How to think about an individual consumer
+- These models give terrible predictions
+- How about bounds? 
+- Modeling selection?  
+
+
+# Subjective vs objective tasks
+- hiring decisions
+- Machine learns from those that have accepted the offer -> bias towards those more likely to accept, not the best.
+
+
+# What predicts citations?
+- Can algorithms replace referees?  
+- Hirsh PNAS predict citations with 'h' index 
+- How scientists choose their projects
+
+# Should internet companies pay for having more complete information about users?
+
+- Airbnb offers a discount if you complete your profile with additional information
+- It could be because they will increase their services
+- Or they sell this information 
+- Assuming they do not seel this information, it is intriguing to know how much value can be adding a covariate to a prediction model
+
+
+
+# DYNARE
+
+- Timing for economists to solve this problem
+- Brute force approaches ~ comparable?
+- Typical solutions that are not available to economists
+- Write a report of 2/3 page 
+- Mid October with Lo and November with Chicago
+- Profile of folks on SRM
+- Coderbits data / github data
+
+
+# MGH experiment
+
+- Contamination
+- Solicitation affected probability to go on the website for additional information or forget about the initiative. On the website, the information about prizes was provided but the website was also primed to report first the message of the email and then the full information in a separate section (that everyone could click and read). So, after logging in, employees could decide to gather additional information (about rewards, submission process, etc.) or log out and forget about the initiative. 
+
+
+# Peer review process at PLOS one
+quality ~ univariate random variable ~ estimate value
+(novelty ??)
+
+-- Do you really need the quality as a single index ?
+-- Difference in evaluation criteria
+-- Taste | expertise
+
+# NTL meeting
+
+- DOD project 
+- <http://www.Md5.net>
+- DOD platform for external crowdsourcing
+- Commercialization --> products based on existing technology at DOD
+- Value technology: Inbound vs outbound
+- research hackaton 
+- matching market for teams (repeated/one-shot teams)
+
+
+# Experiment on Uber / Lyft
+- Hire people to register and work Uber one week
+- See video 'The math of being a Lyft driver'
+
+
+
+# Addnote new program for annotations
+Created new program
+Should publish on github
+
+# More on  Academia.edu  
+
+## Paper on citations of Academia.edu papers
+<http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0148257> a "median" paper on Ac.edu gets 16% more citations the first year, 60% next 5 years
+(suspect large effect is due to citations being rare events)
+
+## Experiment outlined
+
+- market for referees
+- role of the editors (as opposed to direct author)
+- crowd-based referees 
+ 
+# HeroX
+
+- data from the platform 800 projects
+- Ideas about gender sorting into the projects
+- Experiment on how to present a problem (e.g., advertising?)
+
+# Correlated MS model
+
+- Analogue of winner's curse?
+- Bidding function convex/concave depending on correlation/independence
+	* intuitive: high (low) ability believe everyone is high (low) ability
+- Implications for design: can we have multiple prizes with linear cost functions under positive correlation?
+ 
+
+---
+title: Notes
+author: Andrea Blasco
+---

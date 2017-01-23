@@ -1,0 +1,26 @@
+#!/bin/bash
+local_dir=`pwd`
+lib_dir=$HOME/Scripts/Library/createproject
+mkdir -p {Config,Paper,Paper_html,Paper_docx,Templates}
+mkdir -p {Paper,Paper_html,Paper_docx}/{Templates,Code}
+echo "New project: `date +'%B %d, %Y'`" > $local_dir/README
+
+# Yaml files
+cp $lib_dir/*.yml $local_dir/Config
+cp $lib_dir/pandocfilters/* $local_dir/Config
+
+# Copy files
+cp $lib_dir/index.Rmd $local_dir
+cp $lib_dir/make_paper $local_dir
+cp $lib_dir/template.latex $local_dir/Templates
+  
+# Css styles
+> $local_dir/Paper_html/styles.css
+
+if [ "$1" == "--git" ]; then
+  cd $local_dir
+  git init
+  git add .
+  git commit -m "First commit $local_dir"
+fi
+

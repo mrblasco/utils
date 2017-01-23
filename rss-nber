@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Print titles of RSS Feeds from NBER website
+case "$1" in
+        ed) rss "http://www.nber.org/rss/newed.xml";;
+        io) rss "http://www.nber.org/rss/newio.xml";;
+        ls) rss "http://www.nber.org/rss/newls.xml";;
+        pe) rss "http://www.nber.org/rss/newpe.xml";;
+        pr) rss "http://www.nber.org/rss/newpr.xml";;
+        *)
+            echo "Usage: ed=education; io=industrial; ls=law;"
+            echo "       pr=public; pr=productivity; ..."
+            exit 1
+esac

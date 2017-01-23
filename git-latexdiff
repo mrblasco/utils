@@ -1,0 +1,10 @@
+#!/bin/bash
+
+TMPDIR=$(mktemp -d /tmp/git-latexdiff.XXXXXX)
+latexpand "$1" > $TMPDIR/a.tex
+latexpand "$2" > $TMPDIR/b.tex
+latexdiff $TMPDIR/a.tex $TMPDIR/b.tex > $TMPDIR/diff.tex
+pdflatex -interaction nonstopmode -output-directory $TMPDIR $TMPDIR/diff.tex
+open $TMPDIR/diff.pdf
+rm -rf $TMPDIR
+

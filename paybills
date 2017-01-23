@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+if [ $# -eq 0 ]
+  then
+    echo "-g gas, -e electricity, -m mobile"
+fi
+for i in "$@"; do
+case $i in
+  -g|--gas)		    open "https://online.nationalgridus.com";;
+  -e|--electric)  open "https://www.eversource.com" ;;
+  -m|--tmobile)   open "http://prepaid-phones.t-mobile.com/prepaid-refill" ;;
+  *)              echo "Error unknown option; -g gas, -e electricity, -m mobile";;
+esac
+done
+

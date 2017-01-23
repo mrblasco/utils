@@ -1,0 +1,25 @@
+#!/bin/bash
+home_dir=`pwd`
+if [ -f "$1" ];
+then
+  text=$(cat $1 | sed "s/\"//g")
+else 
+  text="$1"
+fi
+
+osascript -e "tell application \"Mail\"
+
+	set theSubject to \"$1\" -- the subject
+	set theContent to \"$text\" -- the content
+	set theAddress to \"mrblasc@gmail.com\" -- the receiver 
+	set theSignatureName to \"IQSS\"-- the signature name
+  set theAttachmentFile to \"$attachment\" 
+  
+	set msg to make new outgoing message with properties {subject: theSubject, content: theContent, visible:true}
+
+	tell msg to make new to recipient at end of every to recipient with properties {address:theAddress}
+
+	set message signature of msg to signature theSignatureName
+
+end tell"
+

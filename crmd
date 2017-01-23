@@ -1,0 +1,15 @@
+#!/bin/bash
+filename=$1
+if [ ! -f "$filename" ]; then
+ echo "Error: $1 file not found!" && exit -1
+fi
+Rscript -e "rmarkdown::render('$filename')" || exit -1
+
+########################################
+#pdf_dir="Pdfs"
+# test -d $pdf_dir || mkdir -p $pdf_dir
+# if [ -f "${filename%.*}.pdf" ]; then
+#   mv ${filename%.*}.pdf $pdf_dir
+#   open $pdf_dir/${filename%.*}.pdf
+# fi
+########################################

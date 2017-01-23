@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Source: http://sweetme.at/2013/09/05/read-rss-feeds-in-your-terminal/
+
+# Sanity checks
+if [ -z $1 ]; then
+  echo -e "\033[0;31mError: URL is missing!\033[0m"
+  exit 1
+fi
+
+# Command
+curl "$1"  2>/dev/null | xml fo --omit-decl --nocdata | grep "<title>" | sed -e "s/.*\<title\>\(.*\)\<\/title\>.*/»\ \1/g" | less
+
+#rss http://www.lastampa.it/rss.xml
+#http://www.lastampa.it/italia/politica/rss.xml
+#http://www.lastampa.it/italia/cronache/rss.xml
+#http://www.lastampa.it/esteri/rss.xml
+#http://www.lastampa.it/economia/rss.xml
+#http://www.lastampa.it/sport/rss.xml
+#http://www.lastampa.it/scienza/benessere/rss.xml
+#http://www.lastampa.it/cultura/rss.xml
+# http://www.repubblica.it/rss/homepage/rss2.0.xml
+# http://www.repubblica.it/rss/cronaca/rss2.0.xml
+# http://www.repubblica.it/rss/politica/rss2.0.xml
+# http://www.repubblica.it/rss/sport/rss2.0.xml
+# http://www.repubblica.it/rss/esteri/rss2.0.xml
+# http://www.ansa.it/sito/notizie/sport/sport_rss.xml
+# http://www.ansa.it/sito/notizie/politica/politica_rss.xml
+
